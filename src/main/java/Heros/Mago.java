@@ -29,7 +29,7 @@ public class Mago extends Personagem {
                 + "Sua força não reside em músculos ou armaduras, mas em anos de estudo e uma mente disciplinada, "
                 + "capaz de decorar palavras de poder que podem dizimar exércitos ou proteger aliados. Embora seu corpo "
                 + "seja frágil," + "sua mente é uma arma de destruição em massa, fazendo deles os mais temidos causadores de "
-                + "dano à distância. Escolher o caminho do Mago é escolher o poder em sua forma mais pura e volátil.", 550, 10, 0, 0, 2, 10, 2, 0);
+                + "dano à distância. Escolher o caminho do Mago é escolher o poder em sua forma mais pura e volátil.", 550, 45, 0, 0, 0, 0, 20, 15);
     }
     
 
