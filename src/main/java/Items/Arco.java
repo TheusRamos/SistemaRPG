@@ -10,14 +10,14 @@ package Items;
  */
 public class Arco extends Arma {
     
-    int critico;
+    double critico;
     
-   public Arco(String nome, String descricao, int ataqueAdicional, int critico) {
+   public Arco(String nome, String descricao, int ataqueAdicional, double critico) {
         super(nome, descricao, ataqueAdicional);
         this.critico = critico;
     }
 
-    public int getCritico() {
+    public double getCritico() {
         return critico;
     }
 
