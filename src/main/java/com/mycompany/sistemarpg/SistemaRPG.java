@@ -135,7 +135,8 @@ public class SistemaRPG {
             System.out.println("\n--- Você está na entrada de uma floresta. O que deseja fazer? ---");
             System.out.println("[1] Explorar a área");
             System.out.println("[2] Ver status do personagem");
-            System.out.println("[3] Salvar e Sair para o Menu Principal");
+            System.out.println("[3] Equipar item");
+            System.out.println("[4] Salvar e Sair para o Menu Principal");
             
             int escolhaAventura = ler.nextInt();
             
@@ -143,7 +144,7 @@ public class SistemaRPG {
                 case 1:
                     System.out.println("Você adentra a floresta...");
                     // Lógica de evento aleatório
-                    Inimigo monstroEncontrado = new Inimigo("Goblin Ladino", "Pequeno e irritante", 50, 10);
+                    Inimigo monstroEncontrado = new Inimigo("Goblin Ladino", "Pequeno e irritante", 200, 15);
                     boolean sobreviveu = Combate.iniciarCombate(personagem, monstroEncontrado);
                     if (!sobreviveu) {
                         return; 
@@ -156,6 +157,16 @@ public class SistemaRPG {
                     System.out.println("Vida: " + personagem.getVidaAtual() + "/" + personagem.getVidaMaxima());
                     break;
                 case 3:
+                    System.out.println("Itens no seu inventario: ");
+                    personagem.mostrarInventario();
+                    ler.nextLine();
+                    System.out.println("\nDigite o nome do item que deseja equipar:");
+                    String nomeItem = ler.nextLine();
+                    personagem.equiparItem(nomeItem);
+                    break;
+                    
+                    
+                case 4:
                     System.out.println("Salvando o jogo... (não implementado)");
                     // GerenciadorDeArquivos.salvarPersonagem(heroi, "save.dat");
                     return; // Volta para o loop do menu principal
