@@ -12,17 +12,41 @@ public class Inimigo extends Personagem {
         super("Goblin", "Ser da natureza", 200, 15);
     }
 
+    
+    @Override
+     public boolean estaVivo() {
+        if(this.vidaAtual > 0){
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+
     @Override
     public void atacar(Personagem alvo) {
         System.out.println(this.nome + " ataca ferozmente " + alvo.getNome() + "!");
-        alvo.receberDano(this.defesaFisica); // Usando defesaFisica como ataque base do monstro
+        alvo.receberDano(this.ataqueAdicional); // Usando defesaFisica como ataque base do monstro
     }
     
     public Item droparLoot() {
-        // Exemplo: 50% de chance de dropar um machado simples
-        if (new Random().nextDouble() <= 0.5) {
-            return new Machado("Machado Enferrujado", "Um machado de goblin.", 3);
+        
+        if (new Random().nextDouble() <= 0.4) {
+            return new Machado("Machado de Lenhador", "Um machado simples e rústico", 3);
         }
+        if (new Random().nextDouble() <= 0.3) {
+            return new Machado("Machado de Guerra de Ferro", "Forjado para batalhas", 3);
+        }
+        if (new Random().nextDouble() <= 0.2) {
+            return new Machado("Machado Duplo de Anão", "Poderoso, mas pesado", 3);
+        }
+        if (new Random().nextDouble() <= 0.1) {
+            return new Machado("Machado Executer de Orgrimmar", "Arma temível dos orcs.", 3);
+        }
+        if (new Random().nextDouble() <= 0.02) {
+            return new Machado("Lamento Sombrio (Shadowmourne)", "Lendário machado imbuído com almas", 3);
+        }
+        
         return null;
     }
 }
