@@ -1,7 +1,8 @@
 package Heros;
 
-import Items.Item;
-import Items.Item;
+import Items.*;
+
+import Items.Machado;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -14,9 +15,9 @@ public abstract class Personagem {
     protected int ataqueAdicional;
     protected int vidaMaxima;
     protected int inteligencia;
-    protected int critico;
-    protected int robustez;
-    protected int esquiva;
+    protected double critico;
+    protected double robustez;
+    protected double esquiva;
     protected int defesaMagica;
     protected int defesaFisica;
 
@@ -25,7 +26,7 @@ public abstract class Personagem {
     protected Map<String, Item> equipamentos;
     protected List<Item> inventario;
 
-    public Personagem(String nome, String descricao, int vidaMaxima, int inteligencia, int critico, int robustez, int esquiva, int defesaMagica, int defesaFisica, int ataqueAdicional) {
+    public Personagem(String nome, String descricao, int vidaMaxima, int inteligencia, double critico, double robustez, double esquiva, int defesaMagica, int defesaFisica, int ataqueAdicional) {
         this.nome = nome;
         this.descricao = descricao;
         this.vidaMaxima = vidaMaxima;
@@ -60,7 +61,7 @@ public abstract class Personagem {
     }
 
     public boolean estaVivo() {
-        if(this.vidaAtual > 0){
+        if (this.vidaAtual > 0) {
             return true;
         } else {
             return false;
@@ -76,7 +77,7 @@ public abstract class Personagem {
     }
 
     public void equiparItem(String nomeItem) {
-        
+
         if (this.inventario == null) {
             System.out.println("Inventário vazio!!");
         }
@@ -103,11 +104,46 @@ public abstract class Personagem {
         if (this.inventario != null) {
             for (Item e : inventario) {
                 System.out.println("- " + e.getNome());
+                if (e instanceof Arco) {
+                    Arco arco = (Arco) e;
+                    System.out.println(" Atributos do item:"
+                            + "Ataque adicional: " + arco.getAtaqueAdicional()
+                            + "Critico: " + arco.getCritico() + "\n");
+                } else if (e instanceof Machado) {
+                    Machado machado = (Machado) e;
+                    System.out.println(" Atributos do item:"
+                            + "Ataque adicional: " + machado.getAtaqueAdicional() + "\n");
+                } else if (e instanceof Cajado) {
+                    Cajado cajado = (Cajado) e;
+                    System.out.println(" Atributos do item:"
+                            + "Inteligencia: " + cajado.getInteligenciaAdicional()
+                            + "Ataque Adicional: " + cajado.getAtaqueAdicional() + "\n");
+                } else if (e instanceof ArmaduraTecido) {
+                    ArmaduraTecido armaduraTecido = (ArmaduraTecido) e;
+                    System.out.println(" Atributos do item:"
+                            + "Inteligencia: " + armaduraTecido.getInteligencia()
+                            + "Defesa Magica: " + armaduraTecido.getDefesaMagica() + "\n");
+                } else if (e instanceof ArmaduraTecido) {
+                    ArmaduraLeve armaduraLeve = (ArmaduraLeve) e;
+                    System.out.println(" Atributos do item: "
+                            + "Esquiva: " + armaduraLeve.getEsquiva()
+                            + "Defesa: " + armaduraLeve.getDefesa() + "\n");
+                } else if (e instanceof ArmaduraPesada) {
+                    ArmaduraPesada armaduraPesada = (ArmaduraPesada) e;
+                    System.out.println(" Atributos do item:"
+                            + "Robustez: " + armaduraPesada.getRobustez()
+                            + "Defesa: " + armaduraPesada.getDefesa() + "\n");
+                }
+
             }
         } else {
             System.out.println("Seu inventario esta vazio..");
         }
 
+    }
+
+    public Item droparLoot() {
+        return null;
     }
 
     public String getNome() {
@@ -126,15 +162,15 @@ public abstract class Personagem {
         return inteligencia;
     }
 
-    public int getCritico() {
+    public double getCritico() {
         return critico;
     }
 
-    public int getRobustez() {
+    public double getRobustez() {
         return robustez;
     }
 
-    public int getEsquiva() {
+    public double getEsquiva() {
         return esquiva;
     }
 
