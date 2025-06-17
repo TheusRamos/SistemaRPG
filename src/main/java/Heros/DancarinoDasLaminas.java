@@ -15,6 +15,15 @@ public class DancarinoDasLaminas extends Personagem {
 
     private static final long serialVersionUID = 1L;
 
+    @Override
+    public boolean estaVivo() {
+        if (this.vidaAtual > 0) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
     public DancarinoDasLaminas(String nome) {
         super(nome, "Enquanto guerreiros brutos confiam na força e em armaduras pesadas, o Dançarino das "
                 + "Lâminas transforma o combate em uma arte mortal. Para eles, a batalha é uma dança, e "
@@ -28,12 +37,12 @@ public class DancarinoDasLaminas extends Personagem {
 
     @Override
     public void atacar(Personagem alvo) {
-     System.out.println(this.nome + " acerta o machado em " + alvo.getNome() + "!");
-    // Lógica de dano simples baseada na inteligência
-    int dano = this.ataqueAdicional; 
-    alvo.receberDano(dano);   
+        System.out.println(this.nome + " acerta o machado em " + alvo.getNome() + "!");
+        // Lógica de dano simples baseada na inteligência
+        int dano = this.ataqueAdicional;
+        alvo.receberDano(dano);
     }
-    
+
 }
 
 /*
