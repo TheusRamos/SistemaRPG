@@ -15,6 +15,15 @@ public class Arqueiro extends Personagem {
 
     private static final long serialVersionUID = 1L;
 
+    
+    @Override
+    public boolean estaVivo() {
+        if(this.vidaAtual > 0){
+            return true;
+        } else {
+            return false;
+        }
+    }
     public Arqueiro(String nome) {
         super(nome, "O Arqueiro é o predador silencioso, o olho que tudo vê e a flecha que nunca erra. "
                 + "Com uma agilidade inigualável e uma conexão profunda com a natureza, eles se movem pelo "
