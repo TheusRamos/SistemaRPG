@@ -11,16 +11,16 @@ package Items;
 public class ArmaduraLeve extends Armadura {
     private static final long serialVersionUID = 1L;
     
-    private int esquiva;
+    private double esquiva;
     private int defesa;
     
-    public ArmaduraLeve(String nome, String descricao, int esquiva, int defesa) {
+    public ArmaduraLeve(String nome, String descricao, double esquiva, int defesa) {
         super(nome,descricao);
         this.esquiva = esquiva;
         this.defesa = defesa;
     }
 
-    public int getEsquiva() {
+    public double getEsquiva() {
         return esquiva;
     }
 
