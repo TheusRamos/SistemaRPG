@@ -7,20 +7,20 @@ import java.util.Scanner;
 
 public class Combate {
 
-    public static boolean iniciarCombate(Personagem heroi, Inimigo monstro) {
-        Scanner scanner = new Scanner(System.in);
+    public static boolean iniciarCombate(Personagem personagem, Inimigo monstro) {
+        Scanner ler = new Scanner(System.in);
         System.out.println("\n--- UM " + monstro.getNome().toUpperCase() + " APARECEU! ---");
-
-        while (heroi.estaVivo() && monstro.estaVivo()) {
+        
+        while (personagem.estaVivo() && monstro.estaVivo()) {
             // Turno do Herói
             System.out.println("\n--- SEU TURNO ---");
-            System.out.println("Vida do Herói: " + heroi.getVidaAtual());
+            System.out.println("Vida do Herói: " + personagem.getVidaAtual());
             System.out.println("Vida do Monstro: " + monstro.getVidaAtual());
             System.out.println("Escolha sua ação: [1] Atacar [2] Fugir");
-            int escolha = scanner.nextInt();
+            int escolha = ler.nextInt();
 
             if (escolha == 1) {
-                heroi.atacar(monstro);
+                personagem.atacar(monstro);
             } else {
                 System.out.println("Você fugiu da batalha!");
                 return true; // Considera que o jogador sobreviveu
@@ -29,17 +29,17 @@ public class Combate {
             // Turno do Monstro (se ele ainda estiver vivo)
             if (monstro.estaVivo()) {
                 System.out.println("\n--- TURNO DO MONSTRO ---");
-                monstro.atacar(heroi);
+                monstro.atacar(personagem);
             }
         }
 
         // Fim do combate
-        if (heroi.estaVivo()) {
+        if (personagem.estaVivo()) {
             System.out.println("\nVocê venceu a batalha!");
             Item loot = monstro.droparLoot();
             if (loot != null) {
                 System.out.println("Você encontrou um item: " + loot.getNome());
-                heroi.getInventario().add(loot);
+                personagem.getInventario().add(loot);
             }
             return true;
         } else {
