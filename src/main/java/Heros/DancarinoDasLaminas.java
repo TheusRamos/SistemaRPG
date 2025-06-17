@@ -32,7 +32,7 @@ public class DancarinoDasLaminas extends Personagem {
                 + "que fatia os inimigos com uma velocidade e graça estonteantes. Sua defesa é seu ataque "
                 + "avassalador e sua mobilidade constante, tornando-os um alvo quase impossível de se atingir. "
                 + "Escolher esta classe é abraçar o risco pelo prêmio de um poder ofensivo sem igual no combate "
-                + "corpo a corpo.", 800, 0, 4, 10, 0, 5, 15, 20);
+                + "corpo a corpo.", 850, 0, 0, 0.2, 0.1, 15, 26, 25);
     }
 
     @Override
