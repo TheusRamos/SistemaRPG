@@ -30,7 +30,7 @@ public class Arqueiro extends Personagem {
                 + "terreno como um fantasma, mantendo seus inimigos sempre à distância. Para um Arqueiro, "
                 + "a sobrevivência e a vitória dependem de posicionamento preciso e de uma chuva incessante "
                 + "de flechas que enfraquece o oponente antes que ele possa sequer revidar. Eles são caçadores "
-                + "pacientes, mestres em preparar o terreno e desferir o golpe final com uma precisão letal.", 600, 0, 5, 0, 10, 5, 2, 40);
+                + "pacientes, mestres em preparar o terreno e desferir o golpe final com uma precisão letal.", 600, 10, 0.1, 0.1, 0.1, 5, 10, 40);
     }
     @Override
     public void atacar(Personagem alvo) {
