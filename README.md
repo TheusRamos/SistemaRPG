@@ -46,10 +46,12 @@ O jogo mergulha o jogador em um mundo de fantasia onde ele pode criar seu própr
 * `Menu`: Classes responsáveis pela interação com o usuário e pela lógica dos menus (`Menu`, `Combate`, etc.).
 
 ---
-## Autor
+## Autores
 
-* **Jeazly**
-
+* **Matheus Ramos de Freitas**
+* **Lukas Raymond Freitas Vieira**
+* **Mais um nome**
+  
 *Trabalho desenvolvido para a disciplina de Programação Orientada a Objetos.*
 *Professor: Márcio*
 *Instituição: UNIFUCAMP*
