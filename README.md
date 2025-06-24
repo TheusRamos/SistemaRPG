@@ -50,7 +50,7 @@ O jogo mergulha o jogador em um mundo de fantasia onde ele pode criar seu própr
 
 * **Matheus Ramos de Freitas**
 * **Lukas Raymond Freitas Vieira**
-* **Mais um nome**
+* **Pedro Henrique da Silva Farias**
   
 *Trabalho desenvolvido para a disciplina de Programação Orientada a Objetos.*
 *Professor: Márcio*
