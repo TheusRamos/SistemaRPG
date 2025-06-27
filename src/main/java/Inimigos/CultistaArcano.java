@@ -9,7 +9,7 @@ public class CultistaArcano extends Personagem {
 
     public CultistaArcano(String nome, String descricao, int vida, int ataque) {
 
-        super("Cultista Arcano", "Um fanático devoto de magias esquecidas", 200, 20);
+        super("Cultista Arcano", "Um fanático devoto de magias esquecidas", 200, 65);
     }
 
     @Override
