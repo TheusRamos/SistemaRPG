@@ -279,7 +279,7 @@ public abstract class Personagem implements Serializable {
         }
         
         return "Personagem:"
-                + "\nnome =" + nome
+                + "\nnome = " + nome
                 + "\nataqueAdicional = " + ataqueAdicional
                 + "\nvidaMaxima = " + vidaMaxima
                 + "\ninteligencia = " + inteligencia
