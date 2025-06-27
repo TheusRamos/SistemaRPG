@@ -9,7 +9,7 @@ public class EspectroAtormentado extends Personagem {
 
     public EspectroAtormentado(String nome, String descricao, int vida, int ataque) {
 
-        super("Espectro Atormentado", "O fantasma de um antigo mago que não consegue descansar", 250, 35);
+        super("Espectro Atormentado", "O fantasma de um antigo mago que não consegue descansar", 250, 45);
     }
 
     @Override
