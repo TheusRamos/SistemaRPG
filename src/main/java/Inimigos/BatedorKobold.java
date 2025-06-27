@@ -10,7 +10,7 @@ public class BatedorKobold extends Personagem {
 
     public BatedorKobold(String nome, String descricao, int vida, int ataque) {
 
-        super("Batedor Kobold", "Uma criatura reptiliana pequena e ágil que vive em bandos", 150, 16);
+        super("Batedor Kobold", "Uma criatura reptiliana pequena e ágil que vive em bandos", 150, 36);
     }
 
     @Override
