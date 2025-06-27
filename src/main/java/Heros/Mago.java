@@ -7,6 +7,7 @@ package Heros;
 import Items.Item;
 import java.io.Serializable;
 import java.util.List;
+import java.util.Random;
 
 /**
  *
@@ -22,6 +23,16 @@ public class Mago extends Personagem implements Serializable {
             return true;
         } else {
             return false;
+        }
+    }
+
+    public void receberDano(int dano) {
+
+        this.vidaAtual -= dano - this.defesaMagica;
+        if (this.vidaAtual < 0) {
+            this.vidaAtual = 0;
+
+            System.out.println(this.nome + " recebeu " + dano + " de dano! Vida restante: " + this.vidaAtual);
         }
     }
 
