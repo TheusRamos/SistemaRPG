@@ -9,7 +9,7 @@ public class GolemDeFerro extends Personagem {
 
     public GolemDeFerro(String nome, String descricao, int vida, int ataque) {
 
-        super("Golem de Ferro", "Uma estátua de metal trazida à vida por magia elemental", 550, 20);
+        super("Golem de Ferro", "Uma estátua de metal trazida à vida por magia elemental", 550, 25);
     }
 
     @Override
