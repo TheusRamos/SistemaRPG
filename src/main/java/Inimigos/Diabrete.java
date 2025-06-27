@@ -9,7 +9,7 @@ public class Diabrete extends Personagem {
 
     public Diabrete(String nome, String descricao, int vida, int ataque) {
 
-        super("Diabrete", "Ser do submundo", 250, 35);
+        super("Diabrete", "Ser do submundo", 250, 40);
     }
 
     @Override
